@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_profilesave"
+        icon="@drawable/ic_save_black_24dp"
+        title="@string/st_hsDaLuu" />
+    <tab
+        id="@+id/tab_jobmanager"
+        icon="@drawable/ic_library_books_black_24dp"
+        title="@string/st_qlVieclam" />
+</tabs>

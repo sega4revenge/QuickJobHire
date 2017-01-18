@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuickJob Hire</string>
+    <!--<string name="title_activity_dangky">dangky</string>-->
+
+    <string name="slide_1_title_search">Quick search</string>
+    <string name="slide_2_tile_saving_time">Maximum savings</string>
+    <string name="slide_3_title_notification">Instant message</string>
+    <string name="slide_4_title_start">Are you ready?</string>
+    <string name="slide_1_african_story_books_subtitle">Accurate job search and on-demand candidates.</string>
+    <string name="slide_2_volunteer_professionals_subtitle">Save time and money for the user.</string>
+    <string name="slide_3_download_and_go_subtitle">Notification when a suitable job, constantly update the latest work</string>
+    <string name="slide_4_different_languages_subtitle">Lets experiment and find what works for your favorite</string>
+    <string name="view_sample_tut">View Tutorial Example</string>
+
+    <string name="tutorial_done">START</string>
+    <string name="tutorial_skip">SKIP</string>
+
+
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">Next</string>
+    <string name="step1">Bước 1: Nhập thông tin công ty</string>
+    <string name="step2">Bước 2: Nhập thông tin công việc</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="action_settings">Settings</string>
+    <string name="slide_1_title">Search</string>
+    <string name="slide_1_desc">Accurate job search and on-demand candidates</string>
+    <string name="st_upadate">Update</string>
+    <string name="slide_2_title">Sparge</string>
+    <string name="slide_2_desc">Save time and money</string>
+
+    <string name="slide_3_title">Notifications</string>
+    <string name="slide_3_desc">Get daily Job Alerts</string>
+
+    <string name="slide_4_title">Start</string>
+    <string name="slide_4_desc">Well come to QuickJob</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <string name="title_activity_xuat_tim_kiem">XuatTimKiem</string>
+    <string name="title_activity_hoso_cv">Profile</string>
+    <string name="title_activity_create_hoso">Creat profile</string>
+    <string name="title_activity_home__user">Home</string>
+
+
+    <!-- Content Description -->
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_list__jop">List_Jop</string>
+    <string name="title_activity_edit_profile">Edit Profile</string>
+    <string name="nav_home">Search Profile</string>
+    <string name="nav_menu_2">Post a job</string>
+    <string name="nav_menu_3">Applycation management</string>
+    <string name="nav_menu_4">Save profile </string>
+    <string name="nav_menu_5">Account</string>
+    <string name="nav_menu_6">Exit</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">About Us</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Management Profile</item>
+        <item>Management Jobs</item>
+        <item>Account Setting</item>
+    </string-array>
+    <!-- search dialof-->
+    <string name="search_main">Search Jobs</string>
+    <string name="search_filter">Search</string>
+    <!-- search dialof-->
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_deletejpb">Delete</string>
+    <string name="openDrawer">Open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+    <string name="nn">All careers</string>
+    <string name="dd">All the places</string>
+    <string name="ml">All salary levels</string>
+    <string name="title_activity_recruitment_list">Recruitment_list</string>
+    <string name="title_activity_information">Personal Info</string>
+    <string name="title_activity_updatejob">Edit Job</string>
+    <string name="title_activity_account">Account</string>
+    <string name="title_activity_editaccount">Edit Account</string>
+    <string name="addProfile">Choose the profile to apply</string>
+    <string name="title_activity_detail_profile">DetailProfile</string>
+    <string name="title_activity_chanepass">Change Password</string>
+    <!--// create job-->
+    <string name="st_kinang">Skill</string>
+    <string name="st_thoat">Exit</string>
+    <string name="st_chon">Select</string>
+    <string name="st_ngoaingu">Language</string>
+    <string name="st_gtNam">Male</string>
+    <string name="st_gtNu">Famale</string>
+    <string name="st_gtAll">All</string>
+    <string name="st_doTuoiYC">Enter the request of age</string>
+    <string name="st_doTuoitimkiem">Enter seeking age</string>
+    <string name="st_Tuoi">Age</string>
+    <string name="st_err_taocv"> Please enter all information and try again</string>
+    <string name="st_err_anh">Choose picture</string>
+    <string name="st_uploading">Uploading...</string>
+    <string name="st_plsWait">Please wait...</string>
+
+    <!--create profile-->
+    <string name="st_errHoso">Profile is Create</string>
+    <string name="st_errServer">Unable to connect to server</string>
+    <string name="st_errNamePass">The name of login or password or email is invalid</string>
+    <string name="st_create_success">Create successfully</string>
+    <string name="st_edit_success">Edit successfully</string>
+
+    <!--trạng thái-->
+    <string name="st_stt_dangcho">Waiting</string>
+    <string name="st_stt_dachapnhan">Accepted</string>
+    <string name="st_stt_datuchoi">Refused</string>
+
+    <string name="st_xacNhanXoaCV">Are you sure to delete this job?</string>
+    <string name="st_xacXoaCV">Delete successfully</string>
+    <string name="st_xacNhanXoaHS">Are you sure to delete this profile?</string>
+    <string name="st_xacNhanOK">Yes</string>
+    <string name="st_xacNhanCancel">No</string>
+    <string name="st_dangkyNTV">Employee</string>
+    <string name="st_dangkyNTD">Employer</string>
+    <string name="st_dangky">Sign Up</string>
+
+    <!--home user-->
+    <string name="st_qlcv">Management jobs</string>
+    <string name="st_timkiem">Search</string>
+    <string name="st_dangtinvieclam">Publish a new job</string>
+    <string name="st_qlHoSo">My profile</string>
+    <string name="st_qlVieclam">Management jobs</string>
+    <string name="st_hsDaLuu">Saved profiles</string>
+    <string name="st_cvDaUngTuyen">Recruitment apply jobs</string>
+    <string name="st_cvDaLuu">Saved jobs</string>
+    <string name="st_ycDangXuat">Do you want to logout?</string>
+    <string name="st_ycThoat">Do you want to exit this application?</string>
+    <string name="st_quenmk">Send</string>
+    <string name="st_loiKXD">Error</string>
+    <string name="st_pemissonCamera">You need to be licensed to use camera</string>
+    <string name="st_kinhnghiem">Experience</string>
+    <string name="st_nam">Year</string>
+
+    <!--login-->
+    <string name="st_hayNhapUSERPASS">Please anter your account information or password</string>
+    <string name="st_sendagain">Resend</string>
+    <string name="st_erroDodaiUSERPASS">The length of account or password must be greater than are character</string>
+    <string name="st_saiTKMK">Incorrect account or password</string>
+    <string name="st_nhapTKDK">Please enter full information</string>
+    <string name="st_loiMK">Passwords do not match</string>
+    <string name="st_DKSuccess">Successful registration (Register successfully)</string>
+    <string name="st_CHANGE">Change</string>
+    <string name="st_CHANGE_PASSWORD">Change password</string>
+
+    <!--chi tiết công việc-->
+    <string name="st_motacv">Describe job</string>
+    <string name="st_yeucaucv">Require job</string>
+    <string name="st_dotuoiCV">Age</string>
+    <string name="st_ycngoainguCV">Require foreign language</string>
+    <string name="st_yckynangCV">Require skill</string>
+    <string name="st_yckhacCV">Other requirements</string>
+    <string name="st_ungtuyenCV">Apply</string>
+    <string name="st_goidienCV">Call</string>
+    <string name="st_chiaseCV">Share</string>
+    <string name="st_luuCV">Save</string>
+
+    <!--content detail profile-->
+    <string name="st_sdt">Numberphone</string>
+    <string name="st_quequan">Country</string>
+    <string name="st_diachict">Address</string>
+    <string name="st_mucluongct">Wage</string>
+    <string name="st_hocvanct">Knowledge</string>
+    <string name="st_ngonnguct">Language</string>
+    <string name="st_thongtinct">Supplementary information</string>
+    <string name="st_tuchoict">Refuse</string>
+    <string name="st_chapnhanct">Accepted</string>
+    <string name="st_guict">Send</string>
+    <string name="st_goict">Call</string>
+    <string name="st_gioitinhct">Sex </string>
+
+    <!--fragment first tab-->
+    <string name="st_chuacoHS">No public resume</string>
+
+    <!--login-->
+    <string name="st_hintEmail">Email</string>
+    <string name="st_hintPass">Password</string>
+    <string name="st_btnLogin">Login</string>
+    <string name="st_txtDangky">You don’t have account? Register now!!</string>
+
+    <!--đăng ký nhà tuyển dụng-->
+    <string name="st_hintTenCT">Company Name</string>
+    <string name="st_hintRepeatPass">Enter password again</string>
+    <string name="st_btnTaoTK">Create account</string>
+    <string name="st_txtDangNhap">Do you have account? Login now!</string>
+
+    <string name="st_about_job">Content</string>
+    <string name="st_about_company">Employer</string>
+    <!--đăng ký người tìm việc-->
+    <string name="st_tenNTV">Your name</string>
+
+    <!--dialog -->
+    <string name="st_btnNTV">Employee</string>
+    <string name="st_btnNTD">Employer</string>
+
+    <!--dialog mức lương-->
+    <string name="st_tu">Since</string>
+    <string name="st_den">To</string>
+
+    <!--edit_profile-->
+    <string name="st_tenProf">Last name and first name</string>
+    <string name="st_btnChonNgaySinh">Choose/ select the date of birthday</string>
+    <string name="st_ttLienHe">Contacted information</string>
+    <string name="st_ttKinhNghiem">Experience(optional)</string>
+    <string name="st_ttCongViec">Desired job</string>
+    <string name="st_ttnnAdd">No foreign languages, enter (+) to add.</string>
+    <string name="st_ttknAdd">No skills, enter (+) to add</string>
+    <string name="st_btnXoa">Delete</string>
+    <string name="st_cteatejob">Creat job</string>
+    <string name="st_btnEdit">Change</string>
+    <string name="st_editjob">Edit Job</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="st_reg">You need to log in to apply</string>
+    <string name="st_skill">Experience Level</string>
+    <string name="title_activity_edit_job">EditJobActivity</string>
+    <string name="st_hintTotNghiep">Graduate school</string>
+    <string name="st_hintChuyenNganh">Specialist</string>
+    <string name="st_hintThanhTuu">Acquired achievement</string>
+    <string name="st_hintNamKN">The number of experienced year</string>
+    <string name="st_hintChucDanh">Job Title, Keywords</string>
+    <string name="st_hintMoTaCV">Describe job</string>
+    <string name="st_hintTenCTMM">The desired company</string>
+    <string name="st_hintTenCVMM">The name of desired job</string>
+    <string name="st_hintViTriMM">Desired position</string>
+    <string name="st_diachi">Addresses</string>
+    <!--TẠO CÔNG VIỆC-->
+    <string name="st_txtTTCT">The information of company</string>
+    <string name="st_txtChonLogo">Select the logo of company</string>
+    <string name="st_txtQuyMo">Size/ scale</string>
+    <string name="st_hintNganhNghe">Careers</string>
+    <string name="st_txtGTCT">Introduce Company</string>
+    <string name="st_txtTTCV">The information of job</string>
+    <string name="st_hintTenCV">Job Name</string>
+    <string name="st_hintMotaCV">Job Description</string>
+    <string name="st_hintSoLuongTuyen">The number of vacancies</string>
+    <string name="st_hintHanNop">Time limit to apply profile</string>
+    <string name="st_hintYeuCau">Request</string>
+    <string name="st_hintYeuCauTuoi">Age</string>
+    <string name="st_gtKhac">Other</string>
+    <string name="st_gt">Sex</string>
+    <string name="st_ycKhac">Other requirements</string>
+    <string name="st_phucloi">Welfare</string>
+    <string name="st_btnNhapLai">Retype</string>
+    <string name="st_btnDangTin">Apply</string>
+
+    <!--QUẢN LÝ CÔNG VIỆC-->
+    <string name="st_congViec">Job</string>
+    <string name="st_slUngTuyen">The number of applying profile</string>
+    <string name="st_ttQuangCao">No advertisements, enter below to create </string>
+    <string name="st_timkiemNangCao">Anvanced search</string>
+    <string name="st_chuaUngTuyenCV">Jobs yet to be applied</string>
+    <string name="st_chuaCoCV">You don’t create profile. Click button (add) to create</string>
+    <string name="st_btnTaoHS">Create profile</string>
+    <string name="st_chuaHSLuu">No profiles are saved</string>
+    <string name="st_timUngVien">Candidates Search</string>
+    <string name="st_hocVanTitle">Knowledge</string>
+    <string name="st_taoProfile">Create</string>
+    <string name="st_dangTinQC">Publish a new</string>
+
+
+    // chi tiết hồ sơ
+    <string name="st_hsDaChon">Profile is selected</string>
+    <string name="st_tuChoiHS">Rejected</string>
+    <string name="st_xoaHS">Are you sure to delete this profile?</string>
+
+    <string name="error_invalid_email">This address of email is invalid</string>
+    <string name="error_invalid_password">The password is too short</string>
+    <string name="error_incorrect_password">This is password is incorrect</string>
+    <string name="error_field_required">Not to be missed this content</string>
+    <string name="error_invalid_ten">The name is too short</string>
+    <string name="error_invalid_tenCY">The name of company is too short</string>
+    <string name="error_invalid_phone">The phone number unformatted</string>
+    <string name="st_changepass">Change password</string>
+    <string name="st_oldpass">Old Password</string>
+    <string name="st_newpass">New Password</string>
+    <string name="st_renewpass">Enter password again</string>
+    <string name="st_endDate">Expiring date</string>
+    <string name="st_xacNhan">Confirm</string>
+    <string name="st_maKHL">Code is invalid</string>
+    <string name="st_maXN_khongdung">Confirmed code is incorrect</string>
+    <string name="st_quenmk_ten"><u>Forget password?</u></string>
+    <string name="st_ktTimKiem">Search Results</string>
+    <string name="st_nhapMaXN">Enter confirmed code</string>
+    <string name="st_btnthem">Create</string>
+    <string name="st_quenmkTK">Forget password</string>
+
+
+    <!--25/8/2016-->
+    <string name="action_favorite">Save</string>
+    <string name="action_share">Share</string>
+    <string name="st_about">About</string>
+    <string name="st_exit">Exit</string>
+    <string name="st_try_again">Try again</string>
+    <string name="server_unreachable">Not connect to server? Try again!</string>
+
+    <string name="st_andress">address</string>
+
+    <string name="st_info">information of company</string>
+    <string name="st_age">Age</string>
+    <string name="st_avatar">Avatar</string>
+    <string name="st_changeSuccess">Successful password changes</string>
+    <string name="st_changeError">Your password does not match</string>
+    <string name="st_changeOldError">Old pass wrong</string>
+    <string name="st_selectLocation">Location</string>
+    <string name="copy_right">Copyrights © %1$d</string>
+    <string name="st_cancel">Cancel</string>
+    <string name="st_ttud">Application Information</string>
+    <string name="st_chuacoTK"><u>Sign Up Now!</u></string>
+    <string name="about_app">Quick Job is a job search app launched for the purpose of helping people can find work quickly, accurately and conveniently. Hopefully everyone will be satisfied with this application. If you have any questions please contact us
+</string>
+    <string name="fabcreate">Create job(full time)</string>
+    <string name="fabcreatefast">Fast create job(part time/full time)</string>
+</resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "627080939894",
+    "firebase_url": "https://quickjob-hire.firebaseio.com",
+    "project_id": "quickjob-hire",
+    "storage_bucket": "quickjob-hire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627080939894:android:f19381a329aaa812",
+        "android_client_info": {
+          "package_name": "com.fist.quickjob.quickjobhire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627080939894-iit3jb5mvivno93vttcdh6ofprlrppl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMqUmiGV2D4sPb62nFFf5NzM9V1wS3SKI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
