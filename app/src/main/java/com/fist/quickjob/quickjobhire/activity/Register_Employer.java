@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.quickjob.quickjobhire.R;
 import com.fist.quickjob.quickjobhire.config.AppConfig;
+import com.fist.quickjob.quickjobhire.pref.SessionManager;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -38,6 +39,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -51,10 +53,13 @@ public class Register_Employer extends AppCompatActivity {
     private int mTvSighUpWidth, mTvSighUpHeight;
     private int mDuration;
     View viewobject;
+    SessionManager session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register__employer);
+        session = new SessionManager(getApplicationContext());
+        HashMap<String, String> user = session.getUserDetails();
         Intent i = getIntent();
         int key = i.getIntExtra("KEY", 10);
         type = key + "";
@@ -245,11 +250,21 @@ public class Register_Employer extends AppCompatActivity {
                 return;
             }
             if (jsonResult == 1) {
-                        Intent intent = new Intent(Register_Employer.this, LoginActivity.class);
-                        intent.putExtra("USERNAME", email1);
-                        intent.putExtra("pass", pass1);
-                        intent.putExtra("phone", phone1);
-                        startActivity(intent);
+                session.createLoginSession(namecompany1, email1, "", pass1, uid);
+                Intent intent = new Intent(Register_Employer.this, MainActivity.class);
+                intent.putExtra("USERNAME", email1);
+                intent.putExtra("name", namecompany1);
+                intent.putExtra("uid", uid);
+                intent.putExtra("mtype", type);
+                intent.putExtra("logo", "");
+                startActivity(intent);
+                finish();
+//
+//                        Intent intent = new Intent(Register_Employer.this, LoginActivity.class);
+//                        intent.putExtra("USERNAME", email1);
+//                        intent.putExtra("pass", pass1);
+//                        intent.putExtra("phone", phone1);
+//                        startActivity(intent);
             }
         }
 

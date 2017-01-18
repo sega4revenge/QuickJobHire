@@ -319,7 +319,7 @@
     <string name="st_chuacoTK"><u>Đăng ký ngay!</u></string>
 
     <string name="about_app">Quick Job là một ứng dụng tìm việc ra đời nhằm mục đích giúp mọi người có thể tìm kiếm công việc một cách nhanh chóng, chính xác, tiện lợi. Hi vọng mọi người sẽ hài lòng về ứng dụng này. Nếu có thắc mắc gì hãy liên hệ với chúng tôi</string>
-    <string name="fabcreate">Tạo công việc(full time)</string>
-    <string name="fabcreatefast">Tạo công việc nhanh(part time/full time)</string>
+    <string name="fabcreate">Tạo công việc</string>
+    <string name="fabcreatefast">Tạo công việc nhanh</string>
     <string name="st_createfast">Tạo nhanh công việc</string>
 </resources>

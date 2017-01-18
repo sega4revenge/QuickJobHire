@@ -321,6 +321,6 @@
     <string name="st_chuacoTK"><u>Sign Up Now!</u></string>
     <string name="about_app">Quick Job is a job search app launched for the purpose of helping people can find work quickly, accurately and conveniently. Hopefully everyone will be satisfied with this application. If you have any questions please contact us
 </string>
-    <string name="fabcreate">Create job(full time)</string>
-    <string name="fabcreatefast">Fast create job(part time/full time)</string>
+    <string name="fabcreate">Create job</string>
+    <string name="fabcreatefast">Fast create job</string>
 </resources>

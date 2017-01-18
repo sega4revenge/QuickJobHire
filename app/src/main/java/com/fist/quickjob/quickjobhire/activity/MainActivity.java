@@ -129,10 +129,12 @@ public class MainActivity extends AppCompatActivity   {
                 switch (position) {
                     case 0:
                         setToolbarTitle(0);
+                        showFab();
                         tabCall.setIcon(R.drawable.icon_menus);
                         break;
                     case 1:
                         backtop();
+                        hideFab();
                         setToolbarTitle(1);
                         tabCall.setIcon(R.drawable.icons_menu2);
                         TabLayout.Tab tabCall2 = tabLayout.getTabAt(0);
@@ -140,12 +142,14 @@ public class MainActivity extends AppCompatActivity   {
                         break;
                     case 2:
                         setToolbarTitle(2);
+                        showFab();
                         tabCall.setIcon(R.drawable.icon_menu3);
                         TabLayout.Tab tabCall3 = tabLayout.getTabAt(0);
                         tabCall3.setIcon(R.drawable.icon_menus);
                         break;
                     case 3:
                         setToolbarTitle(3);
+                        hideFab();
                         tabCall.setIcon(R.drawable.icon_menu4);
                         TabLayout.Tab tabCall4 = tabLayout.getTabAt(0);
                         tabCall4.setIcon(R.drawable.icon_menus);
@@ -180,7 +184,16 @@ public class MainActivity extends AppCompatActivity   {
 //        }
 //    }
 
-
+    private void hideFab() {
+        if (fabMenu.getVisibility() == View.VISIBLE) {
+            fabMenu.setVisibility(View.GONE);
+        }
+    }
+    private void showFab() {
+        if (fabMenu.getVisibility() == View.GONE) {
+            fabMenu.setVisibility(View.VISIBLE);
+        }
+    }
     private void setToolbarTitle(int pos) {
         getSupportActionBar().setTitle(activityTitles[pos]);
     }
