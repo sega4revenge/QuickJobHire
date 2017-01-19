@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">QuickJob Hire</string>
     <!--<string name="title_activity_dangky">dangky</string>-->
-
+    successfully
     <string name="slide_1_title_search">Quick search</string>
     <string name="slide_2_tile_saving_time">Maximum savings</string>
     <string name="slide_3_title_notification">Instant message</string>
@@ -178,7 +178,7 @@
     <string name="st_chapnhanct">Accepted</string>
     <string name="st_guict">Send</string>
     <string name="st_goict">Call</string>
-    <string name="st_gioitinhct">Sex </string>
+    <string name="st_gioitinhct">Gender</string>
 
     <!--fragment first tab-->
     <string name="st_chuacoHS">No public resume</string>
@@ -250,12 +250,12 @@
     <string name="st_hintYeuCau">Request</string>
     <string name="st_hintYeuCauTuoi">Age</string>
     <string name="st_gtKhac">Other</string>
-    <string name="st_gt">Sex</string>
+    <string name="st_gt">Gender</string>
     <string name="st_ycKhac">Other requirements</string>
     <string name="st_phucloi">Welfare</string>
     <string name="st_btnNhapLai">Retype</string>
     <string name="st_btnDangTin">Apply</string>
-
+  \\
     <!--QUẢN LÝ CÔNG VIỆC-->
     <string name="st_congViec">Job</string>
     <string name="st_slUngTuyen">The number of applying profile</string>
@@ -269,7 +269,7 @@
     <string name="st_hocVanTitle">Knowledge</string>
     <string name="st_taoProfile">Create</string>
     <string name="st_dangTinQC">Publish a new</string>
-
+    <string name="showmess_sus">Save successfully</string>
 
     // chi tiết hồ sơ
     <string name="st_hsDaChon">Profile is selected</string>
@@ -321,6 +321,6 @@
     <string name="st_chuacoTK"><u>Sign Up Now!</u></string>
     <string name="about_app">Quick Job is a job search app launched for the purpose of helping people can find work quickly, accurately and conveniently. Hopefully everyone will be satisfied with this application. If you have any questions please contact us
 </string>
-    <string name="fabcreate">Create job</string>
-    <string name="fabcreatefast">Fast create job</string>
+    <string name="fabcreate">Create job(Premium)</string>
+    <string name="fabcreatefast">Create job</string>
 </resources>

@@ -57,6 +57,7 @@
     <string name="nav_menu_2">Đăng tin việc làm</string>
     <string name="nav_menu_3">Quản lý công việc</string>
     <string name="nav_menu_4">Lưu hồ sơ</string>
+    <string name="showmess_sus">Lưu thành công</string>
     <string name="nav_menu_5">Tài khoản</string>
     <string name="nav_menu_6">Thoát</string>
     <string name="nav_settings">Cài đặt</string>
@@ -316,10 +317,9 @@
     <string name="st_cancel">Hủy</string>
     <string name="copy_right">Copyrights © %1$d</string>
     <string name="st_ttud">Thông tin ứng dụng</string>
-    <string name="st_chuacoTK"><u>Đăng ký ngay!</u></string>
+    <string name="st_chuacoTK">Đăng ký ngay!</string>
 
     <string name="about_app">Quick Job là một ứng dụng tìm việc ra đời nhằm mục đích giúp mọi người có thể tìm kiếm công việc một cách nhanh chóng, chính xác, tiện lợi. Hi vọng mọi người sẽ hài lòng về ứng dụng này. Nếu có thắc mắc gì hãy liên hệ với chúng tôi</string>
-    <string name="fabcreate">Tạo công việc</string>
-    <string name="fabcreatefast">Tạo công việc nhanh</string>
-    <string name="st_createfast">Tạo nhanh công việc</string>
+    <string name="fabcreate">Tạo công việc(VIP)</string>
+    <string name="fabcreatefast">Tạo công việc</string>
 </resources>

@@ -100,20 +100,33 @@
         <item>Hậu Giang</item>
         <item>Khác</item>
     </string-array>
-
+  <string-array name="parttimejob">
+    <item>All Career</item>
+    <item>Unskilled worker</item>
+    <item>Collaborator</item>
+    <item>Students do more</item>
+    <item>Just have graduated/Interns</item>
+    <item>Defense/Guard/Security</item>
+    <item>Hotel/Restaurant</item>
+    <item>Servant/Maid/Housekeeper</item>
+    <item>Advertiser/Marketing</item>
+    <item>Driver/Delivery</item>
+    <item>Part-time job</item>
+    <item>Urgent Hiring</item>
+  </string-array>
     <string-array name="nganhNghe">
         <item>All Career</item>
-        <item>Lao động phổ thông</item>
-        <item>Cộng tác viên</item>
-        <item>Sinh viên làm thêm</item>
-        <item>Sinh viên mới tốt nghiệp/Thực tập</item>
-        <item>Bảo vệ/vệ sĩ/An ninh</item>
-        <item>Khách sạn/nhà hàng</item>
-        <item>Phục vụ/Giúp việc/Tạp vụ</item>
-        <item>Tiếp thị/Quảng cáo/Marketing</item>
-        <item>Tài xế/Lái xe/Giao nhận</item>
-        <item>Việc làm thêm/ Việc làm ngoài giờ</item>
-        <item>Việc cần tuyển gấp</item>
+        <item>Unskilled worker</item>
+        <item>Collaborator</item>
+        <item>Students do more</item>
+        <item>Just have graduated/Interns</item>
+        <item>Defense/Guard/Security</item>
+        <item>Hotel/Restaurant</item>
+        <item>Servant/Maid/Housekeeper</item>
+        <item>Advertiser/Marketing</item>
+        <item>Driver/Delivery</item>
+        <item>Part-time job</item>
+        <item>Urgent Hiring</item>
         <item>Pharmacist</item>
         <item>pharmaceutical representative</item>
         <item>Maintenance</item>
@@ -162,7 +175,7 @@
         <item>Other</item>
     </string-array>
     <string-array name="spsex">
-        <item>All sex</item>
+        <item>All Gender</item>
         <item>Man</item>
         <item>women</item>
     </string-array>

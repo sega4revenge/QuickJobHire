@@ -215,34 +215,49 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="100">
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        >
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/eddc"
-                            android:hint="@string/st_diachi"
-                            android:maxLines="1"
-                            android:inputType="text"
-                            android:singleLine="true"
-                            />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <android.support.design.widget.TextInputLayout
+                    <RelativeLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="50">
-                        <EditText
-                            android:id="@+id/soluong"
+
+                        <android.support.design.widget.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            >
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/eddc"
+                                android:hint="@string/st_diachi"
+                                android:maxLines="1"
+                                android:inputType="text"
+                                android:singleLine="true"
+                                />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/imgloca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            android:src="@drawable/searchloca" />
+
+                    </RelativeLayout>
+
+
+
+                        <EditText
+                            android:id="@+id/soluong"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:textSize="12dp"
                             android:hint="@string/st_hintSoLuongTuyen"
                             android:inputType="number"
+                            android:layout_weight="50"
                             />
-                    </android.support.design.widget.TextInputLayout>
+
                 <Spinner
                     android:id="@+id/diadiem"
                     android:layout_width="match_parent"

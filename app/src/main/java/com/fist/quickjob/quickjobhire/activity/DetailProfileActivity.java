@@ -274,9 +274,7 @@ public class DetailProfileActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-            Toast.makeText(DetailProfileActivity.this, result, Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(DetailProfileActivity.this,getResources().getString(R.string.showmess_sus), Toast.LENGTH_SHORT).show();
         }
     }
     private StringBuilder inputStreamToString(InputStream is) {
@@ -307,7 +305,7 @@ public class DetailProfileActivity extends AppCompatActivity {
 
     private void addData() {
         txtname.setText(name+"");
-        String[] sex = getResources().getStringArray(R.array.spsex);
+        String[] sex = getResources().getStringArray(R.array.sex);
         String[] luong2 = getResources().getStringArray(R.array.mucluong);
         if(Integer.parseInt(gioitinh)==1)
         {

@@ -585,7 +585,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lưu hồ sơ"
+                    android:text="@string/nav_menu_4"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
                     android:theme="@style/MyButton"

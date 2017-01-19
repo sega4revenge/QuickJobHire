@@ -306,7 +306,7 @@ public class MainActivity extends AppCompatActivity   {
                 limit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Toast.makeText(MainActivity.this,"321", Toast.LENGTH_SHORT).show();
+
                                        Calendar newCalendar = Calendar.getInstance();
                                         DatePickerDialog fromDatePickerDialog = new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
 
@@ -324,7 +324,7 @@ public class MainActivity extends AppCompatActivity   {
                 });
             final EditText namecompany = (EditText) view1.findViewById(R.id.tenct);
                 namecompany.setText(ten);
-           arrnn = getResources().getStringArray(R.array.nganhNghe);
+           arrnn = getResources().getStringArray(R.array.parttimejob);
            arrdd = getResources().getStringArray(R.array.diadiem);
            arrsalary = getResources().getStringArray(R.array.mucluong);
            adapternn = new ArrayAdapter<String>(MainActivity.this, R.layout.customspniner, arrnn);
@@ -339,7 +339,7 @@ public class MainActivity extends AppCompatActivity   {
                 adapterbc = new ArrayAdapter<String>(MainActivity.this, R.layout.customspniner,getResources().getStringArray(R.array.spChucDanh));
                 adapterbc.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
                 spbc.setAdapter(adapterbc);
-                builder.setTitle(getString(R.string.st_createfast));
+                builder.setTitle(getString(R.string.fabcreatefast));
                 builder.setView(view1);
                 String positiveText = getString(android.R.string.ok);
                 builder.setPositiveButton(positiveText,

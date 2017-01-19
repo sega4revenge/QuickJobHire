@@ -83,7 +83,6 @@
         </activity>
         <activity
             android:name="com.fist.quickjob.quickjobhire.activity.JobDetailActivity"
-            android:theme="@style/AppThemeIntro"
             android:windowSoftInputMode="stateHidden"></activity>
 
         <activity

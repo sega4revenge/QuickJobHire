@@ -486,8 +486,8 @@ public class EditJobActivity extends AppCompatActivity {
         hannophoso = s.getStringExtra("ngayup");
         ngoaingu = s.getStringExtra("ngoaingu");
         tuoi = s.getStringExtra("dotuoi");
-        gt = s.getIntExtra("gioitinh",2)+"";
-        hv = s.getIntExtra("yeucaubangcap",2)+"";
+        gt = s.getStringExtra("gioitinh")+"";
+        hv = s.getStringExtra("yeucaubangcap")+"";
         khac = s.getStringExtra("khac");
         motacv = s.getStringExtra("motacv");
         kn = s.getStringExtra("kn");

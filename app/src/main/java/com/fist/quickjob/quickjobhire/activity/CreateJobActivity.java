@@ -46,6 +46,9 @@ import com.android.volley.toolbox.Volley;
 import com.example.quickjob.quickjobhire.R;
 import com.fist.quickjob.quickjobhire.config.AppConfig;
 import com.fist.quickjob.quickjobhire.pref.SessionManager;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.location.places.ui.PlacePicker;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -76,13 +79,18 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import static com.example.quickjob.quickjobhire.R.id.img;
+import static com.example.quickjob.quickjobhire.R.id.motact;
+import static com.example.quickjob.quickjobhire.R.id.motacv;
 import static com.example.quickjob.quickjobhire.R.id.nganhnghe;
+import static com.example.quickjob.quickjobhire.R.id.soluong;
+import static com.example.quickjob.quickjobhire.R.id.tencv;
 
 /**
  * Created by VinhNguyen on 8/22/2016.
  */
 public class CreateJobActivity extends AppCompatActivity {
-
+    private static final int PLACE_PICKER_REQUEST = 3;
     private EditText eddc, edtencv,edmotacv,edtenct,edquymo,eddiachi,ednganhnghe,edmotact,edtuoi,edyeucaukhac,edhannophoso,edsoluong,edphucloi;
     private Spinner noilamviec,chucdanh,hocvan,tennganhnghe,mucluong;
     private LinearLayout lin1,lin2,lin3,lin4,lin5,lin6;
@@ -90,7 +98,7 @@ public class CreateJobActivity extends AppCompatActivity {
     private TextView m,n,b,m1,n11,b1;
     private RadioGroup group;
     private RadioButton nam,nu,all;
-    private ImageView logo;
+    private ImageView logo,imgloca;
     private ImageButton addnn,addkn,n1,n2,n3,k1,k2,k3;
     private int key=0,key2=0,key3=0,key4=0,key5=0,key6=0;
     private Calendar calendar;
@@ -113,12 +121,18 @@ public class CreateJobActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-
+        imgloca=(ImageView) findViewById(R.id.imgloca);
         getData();
         events();
     }
 
     private void events() {
+        imgloca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                locationPlacesIntent();
+            }
+        });
         edhannophoso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -250,6 +264,17 @@ public class CreateJobActivity extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                if (requestCode == PLACE_PICKER_REQUEST) {
+//                    if (resultCode == RESULT_OK) {
+//                        Place place = PlacePicker.getPlace(CreateJobActivity.this, data);
+//                        if (place != null) {
+//                        LatLng latLng = place.getLatLng();
+//                        lng = latLng.latitude;
+//                        lat = latLng.longitude;
+//
+//                        }
+//                    }
+//                }
                 namejop = edtencv.getText().toString();
                 yck = edyeucaukhac.getText().toString();
                 namecompany = edtenct.getText().toString();
@@ -556,10 +581,36 @@ public class CreateJobActivity extends AppCompatActivity {
                 return;
             }
             if(jsonResult == 1){
-                 Intent intent=new Intent();
-                intent.putExtra("url",image);
-                setResult(2,intent);
+                Intent s = new Intent(CreateJobActivity.this, JobDetailActivity.class);
+                s.putExtra("macv", "");
+                s.putExtra("matd", "");
+                s.putExtra("tencongty", namecompany);
+                s.putExtra("diachi",dc);
+                s.putExtra("nganhnghe", nn);
+                s.putExtra("quymo", qm);
+                s.putExtra("motact", moct);
+                s.putExtra("nganhNghe",jop);
+                s.putExtra("chucdanh", cd);
+                s.putExtra("soluong", soluongtuyen);
+                s.putExtra("phucloi",phucloi);
+                s.putExtra("tencongviec", namejop);
+                s.putExtra("diadiem",map);
+                s.putExtra("mucluong",ml);
+                s.putExtra("ngayup", hnhs);
+                s.putExtra("yeucaubangcap",hv);
+                s.putExtra("dotuoi", dotuoi);
+                s.putExtra("ngoaingu", pp);
+                s.putExtra("gioitinh", gioitinh);
+                s.putExtra("khac", yck);
+                s.putExtra("motacv", mtcv);
+                s.putExtra("kn", oo);
+                s.putExtra("img", img);
+                startActivity(s);
                 finish();
+//                 Intent intent=new Intent();
+//                intent.putExtra("url",image);
+//                setResult(2,intent);
+//                finish();
                  /*   Intent intent = new Intent(dangky2.this, dangnhap.class);
                     intent.putExtra("USERNAME", email1);
                     intent.putExtra("name", name);
@@ -668,7 +719,7 @@ public class CreateJobActivity extends AppCompatActivity {
         lin5 = (LinearLayout) findViewById(R.id.kynang2);
         lin6 = (LinearLayout) findViewById(R.id.kynang3);
         edhannophoso = (EditText) findViewById(R.id.hannophoso);
-        edsoluong = (EditText) findViewById(R.id.soluong);
+        edsoluong = (EditText) findViewById(soluong);
         n1 = (ImageButton) findViewById(R.id.n1);
         n2 = (ImageButton) findViewById(R.id.n2);
         n3 = (ImageButton) findViewById(R.id.n3);
@@ -676,13 +727,13 @@ public class CreateJobActivity extends AppCompatActivity {
         k2 = (ImageButton) findViewById(R.id.k2);
         k3 = (ImageButton) findViewById(R.id.k3);
         edyeucaukhac = (EditText) findViewById(R.id.yeucaukhac);
-        edtencv = (EditText) findViewById(R.id.tencv);
+        edtencv = (EditText) findViewById(tencv);
         edtenct = (EditText) findViewById(R.id.tencongty);
-        edmotacv = (EditText) findViewById(R.id.motacv);
+        edmotacv = (EditText) findViewById(motacv);
         edquymo = (EditText) findViewById(R.id.quymo);
         eddiachi = (EditText) findViewById(R.id.diachi);
         ednganhnghe = (EditText) findViewById(nganhnghe);
-        edmotact = (EditText) findViewById(R.id.motact);
+        edmotact = (EditText) findViewById(motact);
         noilamviec = (Spinner) findViewById(R.id.diadiem);
         mucluong = (Spinner) findViewById(R.id.mucluong);
         tennganhnghe = (Spinner) findViewById(R.id.nganhnghe1);
@@ -708,7 +759,7 @@ public class CreateJobActivity extends AppCompatActivity {
         chucdanh.setAdapter(ad);
         nhaplai = (Button) findViewById(R.id.again);
         create = (Button) findViewById(R.id.create);
-        ArrayAdapter nganhNghe= ArrayAdapter.createFromResource(CreateJobActivity.this,R.array.nganhNghe,android.R.layout.simple_spinner_item);
+        ArrayAdapter nganhNghe= ArrayAdapter.createFromResource(CreateJobActivity.this, R.array.nganhNghe,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         tennganhnghe.setAdapter(nganhNghe);
         ArrayAdapter mucLuong= ArrayAdapter.createFromResource(CreateJobActivity.this,R.array.mucluong,android.R.layout.simple_spinner_item);
@@ -729,6 +780,15 @@ public class CreateJobActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    private void locationPlacesIntent() {
+
+        try {
+            PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+            startActivityForResult(builder.build(CreateJobActivity.this), PLACE_PICKER_REQUEST);
+        } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
     }
 
 }
