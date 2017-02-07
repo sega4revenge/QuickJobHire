@@ -67,6 +67,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
+import static com.example.quickjob.quickjobhire.R.id.namecompany;
 import static com.fist.quickjob.quickjobhire.pref.SessionManager.KEY_LOGO;
 
 
@@ -93,6 +94,8 @@ public class MainActivity extends AppCompatActivity   {
     private Toolbar toolbar;
     private Spinner nganhnghe,mucluong,diadiem,spbc;
     int status=0;
+    String limitapply="",number="",name="",addr="",deta="",difference="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -353,13 +356,13 @@ public class MainActivity extends AppCompatActivity   {
                                 EditText namejob = (EditText) view1.findViewById(R.id.tencv);
                                 EditText address = (EditText) view1.findViewById(R.id.eddc);
                                 EditText detail = (EditText) view1.findViewById(R.id.motacv);
-                                String limitapply =limit.getText()+"";
-                                String number =num.getText()+"";
-                                String name =namecompany.getText()+"";
-                                String job =namejob.getText()+"";
-                                String addr =address.getText()+"";
-                                String deta =detail.getText()+"";
-                                String difference =khac.getText()+"";
+                                 limitapply =limit.getText()+"";
+                                 number =num.getText()+"";
+                                 name =namecompany.getText()+"";
+                                 job =namejob.getText()+"";
+                                 addr =address.getText()+"";
+                                 deta =detail.getText()+"";
+                                 difference =khac.getText()+"";
                                 if(name=="" || job=="" || addr=="" || number=="" || limitapply==""){
                                     Toast.makeText(MainActivity.this,R.string.st_err_taocv+"", Toast.LENGTH_SHORT).show();
                                 }else{
@@ -506,6 +509,31 @@ public class MainActivity extends AppCompatActivity   {
                 if(result.equals("1"))
                 {
                     Toast.makeText(MainActivity.this,getResources().getString(R.string.st_create_success) +"", Toast.LENGTH_SHORT).show();
+                    Intent s = new Intent(MainActivity.this, JobDetailActivity.class);
+                     s.putExtra("macv", "");
+                    s.putExtra("matd", "");
+                    s.putExtra("tencongty", namecompany);
+                    s.putExtra("diachi",dc);
+                    s.putExtra("nganhnghe", nn);
+                    s.putExtra("quymo", quymo);
+                    s.putExtra("motact", mt);
+                    s.putExtra("nganhNghe","");
+                    s.putExtra("chucdanh", "");
+                    s.putExtra("soluong", number);
+                    s.putExtra("phucloi","");
+                    s.putExtra("tencongviec", name);
+                    s.putExtra("diadiem",addr);
+                    s.putExtra("mucluong","");
+                    s.putExtra("ngayup", limitapply);
+                    s.putExtra("yeucaubangcap","");
+                    s.putExtra("dotuoi", "");
+                    s.putExtra("ngoaingu", "");
+                    s.putExtra("gioitinh", "");
+                    s.putExtra("khac", difference);
+                    s.putExtra("motacv", deta);
+                    s.putExtra("kn", "");
+                    s.putExtra("img", logo);
+                    startActivity(s);
                 }
                 status=0;
             }

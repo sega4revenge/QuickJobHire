@@ -57,6 +57,7 @@ public class FragmentFistTab extends Fragment {
     private AlertDialog progressDialog;
     private int stt=0;
     JSONArray mang;
+    AsyncDataClass asyncRequestObject;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.activity_fragment__fist_tab, container, false);
@@ -123,7 +124,7 @@ public class FragmentFistTab extends Fragment {
             adapter.clear();
             adapter.notifyDataSetChanged();
         }
-        AsyncDataClass asyncRequestObject = new AsyncDataClass();
+        asyncRequestObject = new AsyncDataClass();
         asyncRequestObject.execute(AppConfig.URL_UNGTUYEN, macv2);
         mSwipeRefreshLayout.setRefreshing(false);
     }
@@ -206,5 +207,14 @@ public class FragmentFistTab extends Fragment {
             e.printStackTrace();
         }
         return answer;
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if ( asyncRequestObject!= null) {
+            if (!asyncRequestObject.isCancelled()) {
+                asyncRequestObject.cancel(true);
+            }
+        }
     }
 }

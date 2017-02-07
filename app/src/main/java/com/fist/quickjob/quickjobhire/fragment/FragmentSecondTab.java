@@ -51,6 +51,7 @@ public class FragmentSecondTab extends Fragment {
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private int status=0;
     JSONArray mang;
+    AsyncDataClass asyncRequestObject;
 //    private final String serverUrl = "http://192.168.1.41/android/hoso_ungtuyen.php";
 
     @Override
@@ -113,7 +114,7 @@ public class FragmentSecondTab extends Fragment {
              adapter.clear();
              adapter.notifyDataSetChanged();
          }
-         AsyncDataClass asyncRequestObject = new AsyncDataClass();
+         asyncRequestObject = new AsyncDataClass();
          asyncRequestObject.execute(AppConfig.URL_UNGTUYEN, macv2);
          mSwipeRefreshLayout.setRefreshing(false);
     }
@@ -195,5 +196,14 @@ public class FragmentSecondTab extends Fragment {
             e.printStackTrace();
         }
         return answer;
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if ( asyncRequestObject!= null) {
+            if (!asyncRequestObject.isCancelled()) {
+                asyncRequestObject.cancel(true);
+            }
+        }
     }
 }

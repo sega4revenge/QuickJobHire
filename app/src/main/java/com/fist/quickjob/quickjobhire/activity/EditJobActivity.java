@@ -77,6 +77,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import static com.example.quickjob.quickjobhire.R.id.tencv;
+
 public class EditJobActivity extends AppCompatActivity {
     EditText edtencv,edddc, edmotacv, edtenct, edquymo, eddiachi, ednganhnghe, edmotact, edtuoi, edyeucaukhac, edhannophoso, edsoluong, edphucloi;
     Spinner noilamviec, chucdanh, hocvan, tennganhnghe, mucluong;
@@ -656,12 +658,39 @@ public class EditJobActivity extends AppCompatActivity {
             }
             int jsonResult = returnParsedJsonObject(result);
             if (jsonResult == 0) {
-                Toast.makeText(EditJobActivity.this, R.string.st_errNamePass, Toast.LENGTH_SHORT).show();
+            //    Toast.makeText(EditJobActivity.this, R.string.st_errNamePass, Toast.LENGTH_SHORT).show();
                 return;
             }
             if (jsonResult==1) {
                 if(stt2==1) {
                     Toast.makeText(EditJobActivity.this, R.string.st_xacXoaCV, Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(EditJobActivity.this, R.string.st_edit_success, Toast.LENGTH_SHORT).show();
+//namejop, cd, ml, map, mtcv, tuoi, hv, gioitinh, pp, oo, yck, namecompany, qm, dc, nn, moct, uid, jop, hnhs, soluongtuyen, phucloi,macv,matd
+                    Intent intent=new Intent();
+                    intent.putExtra("tencongty",tencongty);
+                    intent.putExtra("diachi",dc);
+                    intent.putExtra("motact",moct);
+                    intent.putExtra("quymo",qm);
+                    intent.putExtra("nganhnghe",nn);
+                    intent.putExtra("tencongviec",namejop);
+                    intent.putExtra("diadiem",map);
+                    intent.putExtra("mucluong",ml);
+                  //  intent.putExtra("dotuoi",dt);
+                    intent.putExtra("ngayup",hnhs);
+                    intent.putExtra("ngoaingu",ngoaingu);
+                    intent.putExtra("dotuoi",tuoi);
+                    intent.putExtra("gioitinh",gioitinh);
+                    intent.putExtra("yeucaubangcap",hv);
+                    intent.putExtra("khac",yck);
+                    intent.putExtra("motacv",mtcv);
+                    intent.putExtra("kn",kn);
+                    intent.putExtra("phucloi",phucloi);
+                    intent.putExtra("nganhNghe",nganhNghe);
+                    intent.putExtra("chucdanh",chucDanh);
+                    intent.putExtra("soluong",soluongtuyen);
+                    intent.putExtra("img",logo1);
+                    setResult(333,intent);
                 }
                 finish();
             }
@@ -748,7 +777,9 @@ public class EditJobActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // handle arrow click here
         if (item.getItemId() == android.R.id.home) {
-            finish(); // close this activity and return to preview activity (if there is any)
+            Intent intent=new Intent();
+            setResult(222,intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -780,14 +811,14 @@ public class EditJobActivity extends AppCompatActivity {
         k2 = (ImageButton) findViewById(R.id.k2);
         k3 = (ImageButton) findViewById(R.id.k3);
         edyeucaukhac = (EditText) findViewById(R.id.yeucaukhac);
-        edtencv = (EditText) findViewById(R.id.tencv);
+        edtencv = (EditText) findViewById(tencv);
         edtenct = (EditText) findViewById(R.id.tencongty);
         edmotacv = (EditText) findViewById(R.id.motacv);
         edquymo = (EditText) findViewById(R.id.quymo);
         eddiachi = (EditText) findViewById(R.id.diachi);
         ednganhnghe = (EditText) findViewById(R.id.nganhnghe);
         edmotact = (EditText) findViewById(R.id.motact);
-        noilamviec = (Spinner) findViewById(R.id.diadiem);
+      //  noilamviec = (Spinner) findViewById(R.id.diadiem);
         mucluong = (Spinner) findViewById(R.id.mucluong);
         tennganhnghe = (Spinner) findViewById(R.id.nganhnghe1);
         edtuoi = (EditText) findViewById(R.id.tuoiyc);
@@ -799,7 +830,7 @@ public class EditJobActivity extends AppCompatActivity {
         addkn = (ImageButton) findViewById(R.id.themkn);
         adapterdiadiem = ArrayAdapter.createFromResource(EditJobActivity.this, R.array.diadiem, android.R.layout.simple_spinner_item);
         adapterdiadiem.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
-        noilamviec.setAdapter(adapterdiadiem);
+    //    noilamviec.setAdapter(adapterdiadiem);
         hocvan = (Spinner) findViewById(R.id.hocvan);
         adapterhocvan = ArrayAdapter.createFromResource(EditJobActivity.this, R.array.spHocVan, android.R.layout.simple_spinner_item);
         adapterhocvan.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
@@ -820,5 +851,13 @@ public class EditJobActivity extends AppCompatActivity {
         mucluong.setAdapter(adaptermucLuong);
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent();
+        setResult(222,intent);
+        finish();
     }
 }

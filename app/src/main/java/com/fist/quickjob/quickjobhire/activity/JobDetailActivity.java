@@ -19,7 +19,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.example.quickjob.quickjobhire.R;
@@ -98,7 +97,7 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
                 s.putExtra("motacv", motacv);
                 s.putExtra("kn", kn);
                 s.putExtra("img", img);
-                startActivity(s);
+                startActivityForResult(s,333);
             }
         });
 
@@ -107,7 +106,50 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
     }
 
 
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+         if(resultCode==333){
+            tenct=data.getStringExtra("tencongty");
+            diachi=data.getStringExtra("diachi");
+            nganhnghe=data.getStringExtra("nganhnghe");
+            quymo=data.getStringExtra("quymo");
+            motact=data.getStringExtra("motact");
+            chucdanh=data.getStringExtra("chucdanh");
+            soluong=data.getStringExtra("soluong");
+            phucloi=data.getStringExtra("phucloi");
+            tencv=data.getStringExtra("tencongviec");
+            diadiem=data.getStringExtra("diadiem");
+            mucluong=data.getStringExtra("mucluong");
+            ngayup=data.getStringExtra("ngayup");
+            tuoi=data.getStringExtra("dotuoi");
+            ngoaingu=data.getStringExtra("ngoaingu");
+            gioitinh=data.getStringExtra("gioitinh");
+            khac=data.getStringExtra("khac");
+            motacv=data.getStringExtra("motacv");
+            kn=data.getStringExtra("kn");
+            img=data.getStringExtra("img");
+            if(data.getStringExtra("yeucaubangcap").equals(""))
+            {
+                hv=0;
+            }else{
+                hv=Integer.parseInt(data.getStringExtra("yeucaubangcap"));
+            }
+            if(data.getStringExtra("nganhNghe").equals(""))
+            {
+                nganhNghe="0";
+            }else{
+                nganhNghe=data.getStringExtra("nganhNghe");
+            }
+            if(data.getStringExtra("gioitinh").equals(""))
+            {
+                gt=0;
+            }else{
+                gt=Integer.parseInt(data.getStringExtra("gioitinh"));
+            }
+                setData();
+        }
+    }
 
 
     private void setupViewPager(ViewPager viewPager) {
@@ -268,7 +310,7 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
         nganhnghe=i.getStringExtra("nganhnghe");
         quymo=i.getStringExtra("quymo");
         motact=i.getStringExtra("motact");
-        nganhNghe=i.getStringExtra("nganhNghe");
+
         chucdanh=i.getStringExtra("chucdanh");
         soluong=i.getStringExtra("soluong");
         phucloi=i.getStringExtra("phucloi");
@@ -277,7 +319,6 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
         mucluong=i.getStringExtra("mucluong");
         ngayup=i.getStringExtra("ngayup");
          tuoi=i.getStringExtra("dotuoi");
-        Toast.makeText(this, tuoi+"", Toast.LENGTH_SHORT).show();
         ngoaingu=i.getStringExtra("ngoaingu");
         gioitinh=i.getStringExtra("gioitinh");
         khac=i.getStringExtra("khac");
@@ -286,13 +327,19 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
        img=i.getStringExtra("img");
         if(i.getStringExtra("yeucaubangcap").equals(""))
         {
-
+            hv=0;
         }else{
             hv=Integer.parseInt(i.getStringExtra("yeucaubangcap"));
         }
+        if(i.getStringExtra("nganhNghe").equals(""))
+        {
+            nganhNghe="0";
+        }else{
+            nganhNghe=i.getStringExtra("nganhNghe");
+        }
         if(i.getStringExtra("gioitinh").equals(""))
         {
-
+            gt=0;
         }else{
             gt=Integer.parseInt(i.getStringExtra("gioitinh"));
         }

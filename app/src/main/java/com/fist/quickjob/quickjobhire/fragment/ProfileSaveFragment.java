@@ -199,6 +199,16 @@ public class ProfileSaveFragment extends Fragment {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if ( asyncRequestObject!= null) {
+            if (!asyncRequestObject.isCancelled()) {
+                asyncRequestObject.cancel(true);
+            }
+        }
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         if (adapter != null) {

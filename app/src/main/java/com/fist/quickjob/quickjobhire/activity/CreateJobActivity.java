@@ -46,9 +46,6 @@ import com.android.volley.toolbox.Volley;
 import com.example.quickjob.quickjobhire.R;
 import com.fist.quickjob.quickjobhire.config.AppConfig;
 import com.fist.quickjob.quickjobhire.pref.SessionManager;
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
-import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.location.places.ui.PlacePicker;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -121,18 +118,18 @@ public class CreateJobActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        imgloca=(ImageView) findViewById(R.id.imgloca);
+     //   imgloca=(ImageView) findViewById(R.id.imgloca);
         getData();
         events();
     }
 
     private void events() {
-        imgloca.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                locationPlacesIntent();
-            }
-        });
+//        imgloca.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                locationPlacesIntent();
+//            }
+//        });
         edhannophoso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -734,7 +731,7 @@ public class CreateJobActivity extends AppCompatActivity {
         eddiachi = (EditText) findViewById(R.id.diachi);
         ednganhnghe = (EditText) findViewById(nganhnghe);
         edmotact = (EditText) findViewById(motact);
-        noilamviec = (Spinner) findViewById(R.id.diadiem);
+       // noilamviec = (Spinner) findViewById(R.id.diadiem);
         mucluong = (Spinner) findViewById(R.id.mucluong);
         tennganhnghe = (Spinner) findViewById(R.id.nganhnghe1);
         edtuoi = (EditText) findViewById(R.id.tuoiyc);
@@ -745,25 +742,25 @@ public class CreateJobActivity extends AppCompatActivity {
         addnn = (ImageButton) findViewById(R.id.themnn);
         addkn = (ImageButton) findViewById(R.id.themkn);
 
-        ArrayAdapter adapter= ArrayAdapter.createFromResource(CreateJobActivity.this,R.array.diadiem,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
-        noilamviec.setAdapter(adapter);
+//        ArrayAdapter adapter= ArrayAdapter.createFromResource(CreateJobActivity.this,R.array.diadiem,android.R.layout.simple_spinner_item);
+//        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+//      //  noilamviec.setAdapter(adapter);
 
         hocvan = (Spinner) findViewById(R.id.hocvan);
         ArrayAdapter adapter3= ArrayAdapter.createFromResource(CreateJobActivity.this,R.array.spHocVan,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        adapter3.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         hocvan.setAdapter(adapter3);
         chucdanh = (Spinner) findViewById(R.id.chucdanh);
         ArrayAdapter ad= ArrayAdapter.createFromResource(CreateJobActivity.this,R.array.spChucDanh,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        ad.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         chucdanh.setAdapter(ad);
         nhaplai = (Button) findViewById(R.id.again);
         create = (Button) findViewById(R.id.create);
         ArrayAdapter nganhNghe= ArrayAdapter.createFromResource(CreateJobActivity.this, R.array.nganhNghe,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        nganhNghe.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         tennganhnghe.setAdapter(nganhNghe);
         ArrayAdapter mucLuong= ArrayAdapter.createFromResource(CreateJobActivity.this,R.array.mucluong,android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        mucLuong.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         mucluong.setAdapter(mucLuong);
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         edtenct.setText(tencongty+"");
@@ -781,14 +778,14 @@ public class CreateJobActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    private void locationPlacesIntent() {
-
-        try {
-            PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-            startActivityForResult(builder.build(CreateJobActivity.this), PLACE_PICKER_REQUEST);
-        } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
-            e.printStackTrace();
-        }
-    }
+//    private void locationPlacesIntent() {
+//
+//        try {
+//            PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+//            startActivityForResult(builder.build(CreateJobActivity.this), PLACE_PICKER_REQUEST);
+//        } catch (GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 }

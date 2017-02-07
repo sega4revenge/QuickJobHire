@@ -501,4 +501,13 @@ public class SearchProfileFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if ( asyncRequestObject!= null) {
+            if (!asyncRequestObject.isCancelled()) {
+                asyncRequestObject.cancel(true);
+            }
+        }
+    }
 }
